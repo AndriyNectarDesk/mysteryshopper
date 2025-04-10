@@ -10,7 +10,11 @@
   "routes": [
     {
       "src": "/success",
-      "dest": "/public/success.html"
+      "dest": "/success.html"
+    },
+    {
+      "src": "/thanks",
+      "dest": "/thanks.html"
     },
     {
       "src": "/(.*)",

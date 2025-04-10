@@ -49,9 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Form submission handling
     if (contactForm) {
-        // Client-side validation before form submission to Formspree
+        // Client-side validation before form submission
         contactForm.addEventListener('submit', function(e) {
-            // Check validation before letting Formspree handle the form
             let isValid = true;
             const requiredFields = ['name', 'email', 'interest', 'message'];
             
@@ -77,7 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (!isValid) {
-                e.preventDefault(); // Only prevent submission if validation fails
+                e.preventDefault(); // Prevent submission if validation fails
+            } else {
+                // Show loading state on submit button
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // We'll let the form submit normally to Web3Forms
+                // The form will be redirected to success.html after submission
             }
         });
         
