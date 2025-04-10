@@ -1,0 +1,24 @@
+{
+  "name": "ottawa-mystery-shoppers",
+  "version": "1.0.0",
+  "description": "Professional website for Ottawa Mystery Shoppers",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "mystery shopping",
+    "ottawa",
+    "retail",
+    "customer experience"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
