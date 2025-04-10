@@ -198,8 +198,11 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/myyragke" method="POST">
-                        <input type="hidden" name="_next" value="https://mysteryshopper.vercel.app/success">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="7d8aa0e5-de24-43e8-8c5a-d9df7ea8f025">
+                        <input type="hidden" name="subject" value="New Contact Form Submission - Ottawa Mystery Shoppers">
+                        <input type="hidden" name="redirect" value="https://mysteryshopper.vercel.app/success.html">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
