@@ -502,6 +502,23 @@ nav ul li a.active::after {
     text-align: center;
 }
 
+.direct-contact {
+    margin-top: 30px;
+}
+
+.direct-contact .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 0;
+    padding: 12px 25px;
+}
+
+.direct-contact .btn-secondary i {
+    font-size: 1.1rem;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -530,6 +547,23 @@ nav ul li a.active::after {
     outline: none;
     border-color: var(--secondary-color);
     box-shadow: 0 0 5px rgba(230, 126, 34, 0.3);
+}
+
+.email-fallback {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+.email-fallback a {
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.email-fallback a:hover {
+    color: var(--primary-color);
 }
 
 /* ========== Footer ========== */

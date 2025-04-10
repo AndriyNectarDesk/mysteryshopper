@@ -193,10 +193,12 @@
                             <p>(613) 555-1234</p>
                         </div>
                     </div>
+                    <div class="direct-contact">
+                        <a href="mailto:info@ottawashoppers.com?subject=Mystery Shopping Inquiry" class="btn-secondary"><i class="fas fa-envelope"></i> Email Us Directly</a>
+                    </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" name="contact" method="POST" data-netlify="true" action="/success.html">
-                        <input type="hidden" name="form-name" value="contact">
+                    <form id="contactForm" action="mailto:info@ottawashoppers.com" method="POST" enctype="text/plain">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -224,6 +226,7 @@
                         </div>
                         <button type="submit" class="btn-primary">Send Message</button>
                     </form>
+                    <p class="email-fallback">If the form doesn't work, you can email us directly at <a href="mailto:info@ottawashoppers.com">info@ottawashoppers.com</a></p>
                 </div>
             </div>
         </div>
