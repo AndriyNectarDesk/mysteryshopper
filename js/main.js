@@ -49,66 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Form submission handling
     if (contactForm) {
-        // Remove the default form handling since we're using FormSubmit
-        /*
+        // Client-side validation before form submission to Netlify
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const formDataObj = {};
-            formData.forEach((value, key) => {
-                formDataObj[key] = value;
-            });
-            
-            // Simple form validation
-            let isValid = true;
-            const requiredFields = ['name', 'email', 'interest', 'message'];
-            
-            requiredFields.forEach(field => {
-                const input = document.getElementById(field);
-                const value = input.value.trim();
-                
-                if (!value) {
-                    isValid = false;
-                    showError(input, 'This field is required');
-                } else {
-                    removeError(input);
-                }
-                
-                // Email validation
-                if (field === 'email' && value) {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(value)) {
-                        isValid = false;
-                        showError(input, 'Please enter a valid email address');
-                    }
-                }
-            });
-            
-            if (isValid) {
-                // In a real application, you would send this data to a server
-                console.log('Form submitted:', formDataObj);
-                
-                // Show success message
-                const successMessage = document.createElement('div');
-                successMessage.className = 'success-message';
-                successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-                
-                // Replace form with success message
-                contactForm.innerHTML = '';
-                contactForm.appendChild(successMessage);
-                
-                // Or reset the form
-                // this.reset();
-                // showAlert('Thank you for your message! We will get back to you soon.', 'success');
-            }
-        });
-        */
-        
-        // Just retain the client-side validation before form submission
-        contactForm.addEventListener('submit', function(e) {
-            // Check validation before letting FormSubmit handle the form
+            // Check validation before letting Netlify handle the form
             let isValid = true;
             const requiredFields = ['name', 'email', 'interest', 'message'];
             
