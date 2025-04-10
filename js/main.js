@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Form submission handling
     if (contactForm) {
-        // Client-side validation before form submission to Netlify
+        // Client-side validation before form submission to Formspree
         contactForm.addEventListener('submit', function(e) {
-            // Check validation before letting Netlify handle the form
+            // Check validation before letting Formspree handle the form
             let isValid = true;
             const requiredFields = ['name', 'email', 'interest', 'message'];
             
