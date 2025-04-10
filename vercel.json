@@ -9,6 +9,10 @@
   ],
   "routes": [
     {
+      "src": "/success",
+      "dest": "/public/success.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
     }
